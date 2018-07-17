@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>	
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/portfolio.css">
+	<script src="js/picturefill.min.js" async></script>	
+</head>
+<body>
+	<!-- general wrapper -->
+	<div class="wrapper_flex">
+		<!-- header -->
+		<div class="row">
+			<header role="banner" class="col-3">				
+				<a class="skip-link" href="#content">Skip to content</a>
+				<!-- https://kyusuf.com/post/completely-css-progressively-collapsing-navigation -->						
+				<nav role="navigation" class="navigation">
+					<input type="checkbox" id="more" aria-hidden="true" tabindex="-1" class="toggle"/>
+						<div class="navigation__inner">						
+						<ul class = "navigation__list">
+							<li class="active navigation__logo"><a href="index.html" class="nav"><img src="img/logo.svg" alt="Svitlana Lesiv logo" class="logo"></a></li>							
+							<li><a href="about.html" class="nav">About</a></li>
+							<li><a href="rigging.html" class="nav">Rigging</a></li>
+							<li><a href="#" class="nav">Web Design</a></li>
+							<li><a href="#" class="nav">Sculpting</a></li>
+							<li><a href="#" class="nav">Animation</a></li>
+							<li><a href="#" class="nav">Photo+</a></li>
+						</ul>
+					<div class="navigation__toggle">
+				      <label for="more" aria-hidden="true" class="navigation__link"><img src="img/list.svg" alt="menu icon" class="menu" id="list-icon"></label>
+				    </div>
+				  </div>				  
+				</nav>
+			</header>
+	  	</div>
+		<!-- image -->
+		<div class="row">
+			<div id="image" title="Dragonfly sitting on a leaf" class="col-3"></div>
+	  	</div>
+		<!-- main content and aside -->
+		<div class="row">
+			 <!-- main content -->
+			 <main role="main" id="content" class="main-home-page col-3">
+			 	<h1 class="main-page-title">Categories</h1>
+				<div class="row-home-links">
+					<div class="col-3-nested">
+						<section class="home-links-1">
+							<a href="#">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/web_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/web_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">				
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/web_200.jpg" alt="web page">
+							  </picture>
+							</a>
+							<h2>Web Design</h2>
+						</section>
+						<section class="home-links-2">
+							<a href="#">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/3d_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/3d_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">	
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/3d_200.jpg" alt="3d model of Fantasy Creature">
+							  </picture>
+							</a>
+							<h2>3D Modeling</h2>
+						</section>
+						<section class="home-links-3">
+							<a href="#">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/anim_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/anim_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/anim_200.jpg" alt="Vector graphic girl walking">
+							  </picture>
+							</a>
+							<h2>Animation</h2>
+						</section>
+					</div>
+				</div>
+				<div class="row-home-links">
+					<div class="col-3-nested">		
+						<section class="home-links-4">
+							<a href="rigging.html">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/rig_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/rig_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/rig_200.jpg" alt="Character rig structure">
+							  </picture>
+							</a>
+							<h2>Rigging</h2>
+						</section>
+						<section class="home-links-5">
+							<a href="#">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/night_forest_2d_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/night_forest_2d_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">	
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/night_forest_2d_200.jpg" alt="Fantasy forest">
+							  </picture>
+							</a>
+							<h2>Photo+</h2>
+						</section>
+						<section class="home-links-6">
+							<a href="#">
+								<picture>
+								<!--[if IE 9]><video style="display: none;"><![endif]-->
+								<source srcset="img/logo_vector_400.jpg" media="(min-width: 1014px)">
+								<source srcset="img/logo_vector_270.jpg" media="(min-width: 767px) and (max-width: 1013px)">							
+								<!--[if IE 9]></video><![endif]-->
+								<img src="img/logo_vector_200.jpg" alt="3d model of movie tape roll">
+							  </picture>
+							</a>
+							<h2>Logos</h2>
+						</section>
+					</div>
+				</div>
+			</main>				
+		</div>
+		
+		<!-- footer -->
+		<div class="row">			
+			<footer role="contentinfo" class="col-3">
+				<button id="toggle-color">Color change</button>
+				<p>&copy; Svitlana Lesiv</p>
+			</footer>
+		</div>
+	</div>
+
+<!-- toggle images in nav bar and color schema -->
+<script type="text/javascript">		
+	$(document).ready(function(){
+		$("#list-icon").mouseover(function() {
+			$(this).attr("src","img/list_green.svg");  	
+		});
+		$(this).mouseout(function() {
+			$("#list-icon").attr("src","img/list.svg");  	
+		});
+	});
+
+	$("#toggle-color" ).click(function() {
+		if($(":root").css("--base-color") == "rgba(12, 12, 12, 1)"){
+			$(":root").css("--base-color", "rgba(200, 200, 200, 1)");
+			$(":root").css("--base-text-color", "rgba(12, 12, 12, 1)");
+		} else {
+			$(":root").css("--base-color", "rgba(12, 12, 12, 1)");
+			$(":root").css("--base-text-color", "rgba(200, 200, 200, 1)");
+		}		 		
+			  
+	});
+	
+</script>
+</body>
+</html>

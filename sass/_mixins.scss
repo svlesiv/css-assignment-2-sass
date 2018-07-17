@@ -1,0 +1,66 @@
+/*_mixins.scss*/
+
+@mixin box-shadow ($h-offset, $v-offset, $blur, $color){
+	-moz-box-shadow:    inset $h-offset $v-offset $blur $color;
+	-webkit-box-shadow: inset $h-offset $v-offset $blur $color;
+	box-shadow:         inset $h-offset $v-offset $blur $color;
+}
+
+@mixin column ($count, $width, $gap, $border-line){
+	-webkit-column-count: $count;
+	   -moz-column-count: $count;
+	        column-count: $count;
+	-webkit-column-width: $width;
+	   -moz-column-width: $width;
+	        column-width: $width;
+	-webkit-column-gap: $gap;
+	   -moz-column-gap: $gap;
+	        column-gap: $gap;
+	-webkit-column-rule: $border-line;
+	   -moz-column-rule: $border-line;
+	        column-rule: $border-line;
+}
+
+@mixin hero-image ($url, $height){
+	background: url($url) no-repeat;
+	background-size: cover;
+	height: $height;
+	padding-top: 5em;
+	margin: 0;
+}
+
+//this function takes a size of media-query as a parameter
+//and returns image url
+@function hero-image-url($media-query){		
+	@if $media-query > 901 {
+		$url:"../img/dragon_fly_1200.jpg";
+		@return $url;
+	}@else if $media-query <= 901 and $media-query >= 552{
+		$url:"../img/dragon_fly_900.jpg";
+		@return $url;
+	}@else {
+		$url:"../img/dragon_fly_700.jpg";
+		@return $url;
+	}
+}
+
+//this function convert color to monochromatic version
+//value from 0 to 10 is lighter version, 
+//and from 0 to -10 is darker varsion of original color
+@function monochromatic($color, $value){
+	@if $value > 0 {
+		@return lighten($color, $value);
+	} @else if $value < 0{
+		@return darken($color, abs($value)*10);
+	} @else {
+		@return $color;
+	}
+}
+
+
+//this function mix original color with complementary color
+//and returns resulted color
+@function complement-mix($color, $value){
+	@return mix(complement($color), $color, $value);
+}
+

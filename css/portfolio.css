@@ -1,0 +1,592 @@
+@import "https://fonts.googleapis.com/css?family=Playfair+Display:400,900";
+@import "https://fonts.googleapis.com/css?family=Raleway";
+/*_variables.scss*/
+/*color variables*/
+/*fonts*/
+/*other*/
+/*_mixins.scss*/
+/*extends*/
+
+
+
+
+.nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  transition: width 0.4s;
+}
+
+.nav:hover:after {
+  width: 100%;
+}
+
+/*loops*/
+/*this loop will set backgound color to 3 items using complement-mix() function*/
+.home-links-1 {
+  background-color: #a9c992;
+}
+
+.home-links-2 {
+  background-color: #8eb870;
+}
+
+.home-links-3 {
+  background-color: #74a451;
+}
+
+.home-links-4 {
+  background-color: #9782a6;
+}
+
+.home-links-5 {
+  background-color: #7e668f;
+}
+
+.home-links-6 {
+  background-color: #645171;
+}
+
+/*css variables*/
+:root {
+  --base-font-size: 1em;
+  --base-line-height: 1.375em;
+  --h1-font-size: 2.5em;
+  --h1-line-height: 1.05em;
+  --h1-padding-top: 1vh;
+  --h2-font-size: 1.7em;
+  --h2-line-height: 1.25em;
+  --h3-font-size: 1.4em;
+  --h3-line-height: 1.25em;
+  --base-page-width: 100%;
+  --base-color: #0c0c0c;
+  --base-text-color: #c8c8c8;
+  --accent-color: #bff698;
+  --base-text-background-color: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  background-color: var(--base-color);
+  padding: 0;
+  margin: 0;
+  color: var(--base-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--base-text-color);
+}
+
+h1 {
+  display: block;
+}
+
+/*responsive typography*/
+body {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  padding-top: var(--h1-padding-top);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+}
+
+@media (max-width: 1201px) {
+  :root {
+    --h1-font-size: 2.2em;
+    --h1-line-height: 1.125em;
+    --h1-padding-top: 1vh;
+    --h2-font-size: 1.5em;
+    --h2-line-height: 1.25em;
+    --h3-font-size: 1.2em;
+    --h3-line-height: 1.25em;
+  }
+}
+
+@media (max-width: 701px) {
+  :root {
+    --base-line-height: 1.25em;
+    --h1-font-size: 2em;
+    --h1-line-height: 1.25em;
+    --h1-padding-top: 3vh;
+    --h2-font-size: 1.5em;
+    --h2-line-height: 1.1em;
+    --h3-font-size: 1.2em;
+    --h3-line-height: 1.1em;
+  }
+}
+
+/*--------------------------------------*/
+*:focus {
+  outline: none;
+  border-color: #bff698;
+  box-shadow: 0 0 3px #bff698;
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+.skip-link {
+  position: fixed;
+  top: -200px;
+}
+
+.skip-link:focus {
+  top: 1em;
+  right: 1em;
+  font-size: 1.3em;
+}
+
+/*header-footer-------------------------*/
+header, footer {
+  background-color: #0c0c0c;
+  color: #c8c8c8;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  overflow: auto;
+  padding-left: 1em;
+  z-index: 100;
+  -moz-box-shadow: inset 0 0 3px #bff698;
+  -webkit-box-shadow: inset 0 0 3px #bff698;
+  box-shadow: inset 0 0 3px #bff698;
+}
+
+footer {
+  text-align: right;
+  margin-top: calc(8% - 1em);
+  padding-right: 6%;
+}
+
+button {
+  border: none;
+  background-color: #0c0c0c;
+  color: #bff698;
+  float: left;
+  margin: 1em;
+  margin-left: 6%;
+}
+
+button:visited {
+  color: #b1f480;
+}
+
+button:hover, button:active {
+  text-decoration: underline;
+  color: #cef8af;
+}
+
+/*navigation----------------------------*/
+nav {
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 90vw;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+nav li {
+  display: inline;
+  padding-right: 3em;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #c8c8c8;
+  position: relative;
+}
+
+nav a:hover {
+  color: #bff698;
+}
+
+/*nav link transitions---------------*/
+.nav:after {
+  border-bottom: 2px solid #bff698;
+}
+
+.active a {
+  color: #bff698;
+}
+
+.logo, .menu {
+  width: 1.7em;
+}
+
+/*toggle nav--------------------*/
+/*https://kyusuf.com/post/completely-css-progressively-collapsing-navigation*/
+.navigation__inner {
+  display: flex;
+  height: 1.3em;
+  /* Collapsed navigation height */
+  margin: 0;
+  overflow: hidden;
+}
+
+.toggle:checked ~ .navigation__inner {
+  height: auto;
+}
+
+.navigation__link {
+  display: block;
+  padding-right: 1em;
+  cursor: pointer;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Hide the checkbox------*/
+.toggle {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/*--------------------------------------*/
+/*main content on home page-------------*/
+.wrapper-flex {
+  overflow: auto;
+  margin: auto;
+  width: 100%;
+}
+
+[class^='home-links-'] {
+  margin-top: 2%;
+  text-align: center;
+  /*image links transitions and transforms*/
+  transition: transform 100ms ease-out,
+ filter 50ms ease-out;
+}
+
+[class^='home-links-'] img {
+  width: 100%;
+  min-width: 200px;
+}
+
+[class^='home-links-'] h2 {
+  color: #0c0c0c;
+  font-size: 1.3em;
+}
+
+[class^='home-links-']:hover {
+  transform: translate(0, -1em) scale(1.05);
+  filter: brightness(0.7);
+}
+
+.main-home-page {
+  margin: 3% 0;
+  padding-bottom: 10vh;
+  border-bottom: 1px solid #cf98f6;
+}
+
+.main-page-title {
+  display: block;
+  padding-bottom: 3vh;
+}
+
+#image {
+  background: url("../img/dragon_fly_1200.jpg") no-repeat;
+  background-size: cover;
+  height: 95vh;
+  padding-top: 5em;
+  margin: 0;
+}
+
+/*home page flex layout------------------*/
+.row, .row-home-links {
+  display: flex;
+  justify-content: center;
+}
+
+.row-home-links {
+  justify-content: left;
+}
+
+.col-3 {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.col-3-nested {
+  flex-basis: 70%;
+  margin-left: 5%;
+}
+
+.main-home-page {
+  flex-basis: 80%;
+  margin: 0 10%;
+}
+
+/*floats*--------------*/
+[class^='home-links-'] {
+  float: left;
+  margin: 2%;
+  min-width: 100px;
+}
+
+/*home page media queries------------------*/
+@media (max-width: 551px) {
+  #image {
+    background: url("../img/dragon_fly_700.jpg") no-repeat;
+    background-size: cover;
+    height: 45vh;
+    padding-top: 5em;
+    margin: 0;
+  }
+  .main-home-page {
+    flex-basis: 100%;
+  }
+  .col-3-nested {
+    flex-basis: calc(100% / 3 - 10%);
+    margin: 0 5%;
+  }
+  .row-home-links {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 552px) and (max-width: 901px) {
+  #image {
+    background: url("../img/dragon_fly_900.jpg") no-repeat;
+    background-size: cover;
+    height: 55vh;
+    padding-top: 5em;
+    margin: 0;
+  }
+  .col-3-nested {
+    flex-basis: calc(100% / 3 + 100% / 3 - 10%);
+    margin: 0 5%;
+  }
+  .row-home-links {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 902px) and (max-width: 1200px) {
+  #image {
+    background: url("../img/dragon_fly_1200.jpg") no-repeat;
+    background-size: cover;
+    height: 70vh;
+    padding-top: 5em;
+    margin: 0;
+  }
+  [class^='home-links-'] {
+    width: calc(100% / 3 - 1%);
+    margin: 0.5%;
+  }
+  .col-3-nested {
+    flex-basis: 80%;
+  }
+  .main-home-page {
+    flex-basis: 90%;
+    margin: 0 5%;
+  }
+}
+
+@media (min-width: 1201px) {
+  [class^='home-links-'] {
+    width: calc(100% / 3 - 1%);
+    margin: 0.5%;
+  }
+}
+
+/*--------------------------------------*/
+/*about page------------------------------*/
+article {
+  padding: 1vh 0 5vh 0;
+  line-height: 1.5;
+}
+
+.pro-info {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-width: 200px;
+  -moz-column-width: 200px;
+  column-width: 200px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  -webkit-column-rule: 1px solid #cf98f6;
+  -moz-column-rule: 1px solid #cf98f6;
+  column-rule: 1px solid #cf98f6;
+}
+
+/*image----------------*/
+.floatleft {
+  width: 100%;
+  max-width: 150px;
+  float: left;
+  padding: 0 1em 1em 0;
+}
+
+/*link style------------------*/
+a[href*="https"] {
+  padding-right: 27px;
+  background: url("../img/external-link_20px_m.png") no-repeat right;
+  background-color: var(--base-text-background-color);
+}
+
+a:not([class="nav"]) {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  color: #bff698;
+}
+
+a:not([class="nav"]):visited {
+  color: #b1f480;
+}
+
+a:not([class="nav"]):hover, a:not([class="nav"]):active {
+  text-decoration: none;
+  color: #cef8af;
+}
+
+/*skills hobbies-------------------*/
+ul {
+  color: var(--accent-color);
+}
+
+.section-header {
+  padding-left: 1.3em;
+  color: var(--base-text-color);
+}
+
+/*aside-------------------*/
+.contact-info {
+  min-width: 250px;
+  width: 20vw;
+  padding: 2%;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  border: 1px solid #cf98f6;
+  border-radius: 5em 0em;
+  background-color: #416f20;
+  color: #c8c8c8;
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: #c8c8c8;
+}
+
+#content-about {
+  margin-top: 1em;
+  width: 70%;
+  padding: 5vh 5vh 0 0;
+}
+
+/*-flex layout about page------*/
+.col-3-about-page {
+  margin-top: 1em;
+  margin-bottom: 5em;
+  flex-basis: 85%;
+}
+
+.nested-flex-row {
+  display: flex;
+}
+
+.col-2 {
+  flex-basis: 100%;
+}
+
+.col-1 {
+  flex-basis: 45%;
+  margin-right: 5%;
+}
+
+/*float on about page*----*/
+.col-3-about-page > *,
+.nested-flex-row > * {
+  float: left;
+}
+
+.hobbies, .skills {
+  padding-right: 18%;
+  margin-right: 5%;
+  margin-top: 3%;
+  border-bottom: 1px solid #cf98f6;
+  border-top: 1px solid #cf98f6;
+}
+
+/*about page media queries------------------*/
+@media (max-width: 701px) {
+  .hobbies {
+    display: none;
+  }
+}
+
+@media (max-width: 1201px) {
+  .contact-info {
+    clear: both;
+  }
+  #content-about {
+    width: 80vw;
+  }
+}
+
+/*rigging videos*---------*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 5em;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*video page flex layout adj---------*/
+.col-2-video {
+  padding-top: 5em;
+  flex-basis: calc(var(--base-page-width) - 45%);
+  margin: 0;
+}
+
+
+
