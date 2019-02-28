@@ -1,0 +1,111 @@
+Your name: Svitlana Lesiv
+
+1. Provide a link to the first page of your website:
+http://svitlanalesiv.me/assignment2/index.html
+
+My site looks the way I want on: PC
+
+With this browser: Chrome 
+
+SASS (50 points)
+Provide partial file name(s) and starting line number(s) for the comment in Sass for the start of each item.
+
+2. Sass variables:
+_variables.scss
+line: 3
+
+3. 1 custom-coded mixin:
+_mixins.scss
+lines: 3, 9, 24
+has been used in portfolio.scss on lines: 157, 396, 334
+
+4. 1 extend:
+portfolio.scss
+lines: 7 and 212
+
+5. 2 levels of nesting:
+portfolio.scss
+line: 181
+
+6. 2 instances of built-in Sass functions:
+portfolio.scss
+lines: 173, 409
+
+7. 1 use of if/else
+_mixins.scss
+lines: 32, 47
+has been used in portfolio.scss on lines: 330,445
+
+8. The names of at least 2 partial files
+_variables.scss
+_mixins.scss
+
+COLOR AND TYPOGRAPHY (25 points)
+Provide partial file name(s) and starting line number(s) for the comment in Sass for the start of each item.
+
+9. Use of 2 typefaces:
+_variables.scss
+lines: 10, 11
+
+a. Names of typefaces and source (i.e. Cabin, Google Fonts)
+Playfair Display, Google Fonts
+Raleway, Google Fonts 
+
+b. An example of a style that uses this typeface (one example for each typeface)
+portfolio.scss
+lines: 68, 75
+
+10. Type scaling:
+portfolio.scss
+lines: 38, 83 
+
+11. Color scheme:
+_variables.scss
+lines: 5, 6 
+
+_mixins.scss
+lines: 47, 61
+
+portfolio.scss
+lines: 24, 446
+
+
+
+
+CSS CUSTOM PROPERTIES/VARIABLES (15 points)
+
+12. Provide partial file name(s) and line number(s) for the comments that  demonstrate:
+
+a. Variables initially configured (at least 3)
+portfolio.scss
+line: 38
+
+b. Variables with changed values in media queries
+portfolio.scss
+line: 102
+
+
+ABOVE AND BEYOND (10 POINTS)
+Identify what you did for Above and Beyond. Provide any relevant HTML, CSS, Sass, or JavaScript line number(s) and explanation of what you did. How many points do you think this was worth, and why?
+1. Use of Sass loops:
+portfolio.scss
+line: 24
+comment: set backgound color for 3 items using complement-mix() function and icrementing its value in a loop
+
+2. Custom Sass function/color scheme generation system:
+_mixins.scss
+lines: 32, 47, 61
+comment: hero-image-url() function helps to determine image url, using media-query size; monochromatic() and complement-mix() functions are helping to create a monochromatic version of original color and mix it with a complementary color
+
+3. JavaScript and CSS custom properties:
+about.html
+line: 129
+comment: when pressing on a button ("Color change" in a footer), we can switch website color from black to white (not including navigation and footer)
+
+4. CSS variables with Calc:
+portfolio.scss
+line: 526
+
+
+
+
