@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Videos</title>
-	<script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/portfolio.css">
+  <meta charset="UTF-8">
+  <title>Videos</title>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-	<div class="wrapper_flex">
-		<!-- header -->
-		<div class="row">
-			<header role="banner" class="col-3">
-				<a class="skip-link" href="#content_about">Skip to content</a>
-				<!-- https://kyusuf.com/post/completely-css-progressively-collapsing-navigation -->
-				<nav role="navigation" class="navigation">
-					<input type="checkbox" id="more" aria-hidden="true" tabindex="-1" class="toggle"/>
-						<div class="navigation__inner">
-							<ul class = "navigation__list">
-								<li><a href="index.html" class="nav"><img src="img/logo_white.svg" alt="Svitlana Lesiv logo" class="logo" id="logo-img"></a></li>
-								<li><a href="about.html" class="nav">About</a></li>
-								<li><a href="videos.html" class="nav active">Videos</a></li>
-							</ul>
-						<div class="navigation__toggle" id="toggle_img">
-					      <label for="more" aria-hidden="true" class="navigation__link"><img src="img/list.svg" alt="menu icon" class="menu" id="list_icon"></label>
-					    </div>
-				  </div>
-				</nav>
-			</header>
-		</div>
-		<div class="row">
-			<main role="main" id="content_about" class="col-2-video">
-				<h1>Videos</h1>
-				<div class="videoWrapper">
-				    <!-- Copy & Pasted from YouTube -->
-				    <iframe width="560" height="315" src="https://www.youtube.com/embed/cGdPJA0iAcA" allowfullscreen></iframe>
-				</div>
-				<div class="videoWrapper">
-				    <!-- Copy & Pasted from YouTube -->
-				    <iframe width="560" height="315" src="https://www.youtube.com/embed/6TlBqN3O71s"  allowfullscreen></iframe>
-				</div>
-				<div class="videoWrapper">
-				    <!-- Copy & Pasted from YouTube -->
-				    <iframe width="560" height="315" src="https://www.youtube.com/embed/eu6oE8l_u7k" allowfullscreen></iframe>
-				</div>
-			</main>
-		</div>
-		<div class="row">
-			<footer role="contentinfo" class="col-3">
-				<button id="toggle-color">Color change</button>
-				<p>&copy; Svitlana Lesiv</p>
-			</footer>
-		</div>
+  <div class="wrapper_flex">
+    <!-- header -->
+    <div class="row">
+      <header role="banner" class="col-3">
+        <a class="skip-link" href="#content_about">Skip to content</a>
+        <!-- https://kyusuf.com/post/completely-css-progressively-collapsing-navigation -->
+        <nav role="navigation" class="navigation">
+          <input type="checkbox" id="more" aria-hidden="true" tabindex="-1" class="toggle"/>
+            <div class="navigation__inner">
+              <ul class = "navigation__list">
+                <li><a href="index.html" class="nav"><img src="img/logo_white.svg" alt="Svitlana Lesiv logo" class="logo" id="logo-img"></a></li>
+                <li><a href="about.html" class="nav">About</a></li>
+                <li><a href="videos.html" class="nav active">Videos</a></li>
+              </ul>
+            <div class="navigation__toggle" id="toggle_img">
+                <label for="more" aria-hidden="true" class="navigation__link"><img src="img/list.svg" alt="menu icon" class="menu" id="list_icon"></label>
+              </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <div class="row">
+      <main role="main" id="content_about" class="col-2-video">
+        <h1>Videos</h1>
+        <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cGdPJA0iAcA" allowfullscreen></iframe>
+        </div>
+        <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6TlBqN3O71s"  allowfullscreen></iframe>
+        </div>
+        <div class="videoWrapper">
+            <!-- Copy & Pasted from YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eu6oE8l_u7k" allowfullscreen></iframe>
+        </div>
+      </main>
+    </div>
+    <div class="row">
+      <footer role="contentinfo" class="col-3">
+        <button id="toggle-color">Color change</button>
+        <p>&copy; Svitlana Lesiv</p>
+      </footer>
+    </div>
 </div>
 
 <!-- toggle images in nav bar and color schema -->
 <script type="text/javascript">
-	$(document).ready(function(){
-		// logo icon
-		$("#logo_img").mouseover(function() {
-			$(this).attr("src","img/logo.svg");
-		});
-		$(this).mouseout(function() {
-			$("#logo_img").attr("src","img/logo_white.svg");
-		});
+  $(document).ready(function(){
+    // logo icon
+    $("#logo_img").mouseover(function() {
+      $(this).attr("src","img/logo.svg");
+    });
+    $(this).mouseout(function() {
+      $("#logo_img").attr("src","img/logo_white.svg");
+    });
 
-		// hamburger list_icon
-		$("#list_icon").mouseover(function() {
-			$(this).attr("src","img/list_green.svg");
-		});
-		$(this).mouseout(function() {
-			$("#list_icon").attr("src","img/list.svg");
-		});
-	});
+    // hamburger list_icon
+    $("#list_icon").mouseover(function() {
+      $(this).attr("src","img/list_green.svg");
+    });
+    $(this).mouseout(function() {
+      $("#list_icon").attr("src","img/list.svg");
+    });
+  });
 
-	$("#toggle-color" ).click(function() {
-		if($(":root").css("--base-color") == "rgba(12, 12, 12, 1)"){
-			$(":root").css("--base-color", "rgba(200, 200, 200, 1)");
-			$(":root").css("--base-text-color", "rgba(12, 12, 12, 1)");
-		} else {
-			$(":root").css("--base-color", "rgba(12, 12, 12, 1)");
-			$(":root").css("--base-text-color", "rgba(200, 200, 200, 1)");
-		}
+  $("#toggle-color" ).click(function() {
+    if($(":root").css("--base-color") == "rgba(12, 12, 12, 1)"){
+      $(":root").css("--base-color", "rgba(200, 200, 200, 1)");
+      $(":root").css("--base-text-color", "rgba(12, 12, 12, 1)");
+    } else {
+      $(":root").css("--base-color", "rgba(12, 12, 12, 1)");
+      $(":root").css("--base-text-color", "rgba(200, 200, 200, 1)");
+    }
 
-	});
+  });
 </script>
 </body>
 </html>
